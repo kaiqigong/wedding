@@ -1,13 +1,14 @@
 /* jshint devel:true */
+'use strict';
 $(document).ready(function() {
   $('#fullpage').fullpage({
     controlArrows: false,
     loopHorizontal: false,
-    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+    afterSlideLoad: function(){
       var loadedSlide = $(this);
       loadedSlide.removeClass('hide-img');
     },
-    onSlideLeave: function( anchorLink, index, slideIndex, direction){
+    onSlideLeave: function(){
       var leavingSlide = $(this);
       setTimeout(function(){
         leavingSlide.addClass('hide-img');

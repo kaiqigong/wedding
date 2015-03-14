@@ -1,0 +1,6 @@
+{
+  "src":          "./dist",
+  "dest":         "qiniu:access_key=PR0t5xIyMRIWCLgeLFbtOND57bnTIpp7CGRMWMCI&secret_key=DsWayvJtPhFyg-NzJNKFnOuEO5I67ZCZyG8NOyYJ&bucket=cage-wedding",
+  "deletable":    1,
+  "debug_level":  1
+}
