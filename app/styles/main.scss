@@ -180,11 +180,10 @@ body{
       display: block !important;
     }
   }
-  .slide.hide-img {
-    img{
-      display: none;
-    }
+  .slide.hide-img img{
+    display: none;
   }
+
   .slide{
     overflow: hidden;
     img{
@@ -204,5 +203,32 @@ body{
     background-color: #FFF;
     box-shadow: 0 0 4px rgba(0,0,0,0.3);
     width: 200px;
+  }
+}
+
+/* Standard syntax */
+@keyframes rotate {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+.music{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  border: 1px #FFF solid;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px;
+  box-shadow: 0 0 2px rgba(0,0,0,.4);
+  text-shadow: 0 0 2px rgba(0,0,0,.4);
+  small, .small{
+    color: #FFF;
+  }
+  &.rotate{
+    animation: rotate 2.26s linear 0 infinite;
   }
 }

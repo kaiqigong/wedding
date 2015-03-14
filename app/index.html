@@ -17,9 +17,21 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
+    <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+    <!-- endbower -->
     <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+      <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
   </head>
   <body class="container">
     <!--[if lt IE 10]>
@@ -63,7 +75,7 @@
             <br>
             共同见证我们的幸福时刻！
           </div>
-          <img src="images/2.jpg" class="photo-with-border" style="" alt="">
+          <img src="images/17.jpg" class="photo-with-border" style="" alt="">
         </div>
         <img src="images/border-bottom.png" alt="" class="bottom">
         <a class="down"></a>
@@ -78,21 +90,19 @@
             <i class="glyphicon glyphicon-menu-right"></i>
           </div>
         </div>
-        <div class="slide hide-img"><img src="images/4.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/5.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/6.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/7.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/8.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/9.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/10.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/11.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/12.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/13.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/15.jpg" alt=""></div>
-        <div class="slide hide-img"><img src="images/14.jpg" alt=""></div>
-        <div class="slide hide-img">
-          <img src="images/16.jpg" alt="">
-        </div>
+        <div class="slide hide-img"><img data-src="images/4.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/20.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/22.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/24.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/8.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/9.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/10.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/22.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/12.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/13.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/15.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/14.jpg" alt=""></div>
+        <div class="slide hide-img"><img data-src="images/18.jpg" alt=""></div>
         <a class="down"></a>
       </div>
 
@@ -109,23 +119,11 @@
         </div>
         <img src="images/border-bottom.png" alt="" class="bottom">
       </div>
-
     </div>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
-    <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
-    <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js scripts/plugins.js -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <div class="music rotate"><i class="glyphicon glyphicon-music"></i></div>
+    <audio id="audio" controls style="display:none" autoplay loop>
+      <source src="images/Sugar.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
