@@ -1,0 +1,208 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$tiffany-blue: #ecf9f8;
+$tiffany-blue-text: #41c1ca;
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html{
+  background: $tiffany-blue;
+}
+body{
+  font-family: "Helvetica Neue", Helvetica, Arial,"Hiragino Sans GB", STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
+  background: $tiffany-blue;
+}
+
+.intro p{
+  padding: 15px;
+}
+.intro{
+  transition: all 1.13s ease-in-out;
+  transform: translate(-100px,0px);
+  opacity: 0;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+  text-align:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section.active .intro{
+  transform: translate(0px,0px);
+  opacity: 1;
+}
+
+.btn{
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin-top: -4px;
+  margin-left: 5px;
+  text-shadow: none;
+  color: #Fff;
+  background-image: linear-gradient(0deg,rgba(255,255,255,0.4),rgba(255,255,255,0.2));
+  box-shadow: 0 0 8px 2px rgba(100,100,100,0.2);
+}
+.btn:hover,.btn:focus{
+  text-decoration: none;
+}
+
+#section-last ul li{
+  text-align: left;
+}
+
+.section.active .down{
+  opacity: 1;
+}
+
+.down{
+  transition: all 1.13s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  width: 20px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: rgba(128,128,128,0.1);
+  left: 50%;
+  transform: translate(-10px,0px);
+  animation: breathing 1.13s linear 1s infinite alternate;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes breathing {
+  0%   {background-color: rgba(128,128,128,0.1);}
+  100% {background-color: rgba(128,128,128,0.6);}
+}
+
+/* Standard syntax */
+@keyframes breathing {
+  0%   {background-color: rgba(128,128,128,0.1);}
+  100% {background-color: rgba(128,128,128,0.6);}
+}
+
+@font-face {
+  font-family: 'Calligraffitti';
+  src: url('../fonts/Calligraffitti-Regular.ttf');
+}
+.en-title{
+  font-family: 'Calligraffitti', cursive;
+  color: #FFF;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  small, .small{
+    color: #FFF;
+  }
+}
+
+#section0{
+  .intro {
+    height: 450px;
+    height: 75vh;
+  }
+}
+
+.text-blue{
+  color: $tiffany-blue-text;
+}
+#section1{
+
+  .photo-with-border{
+    width: 280px;
+    padding: 10px;
+    background-color: #FFF;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    transform: rotate(-6deg);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.section{
+  .top{
+    position: absolute;
+    top: 10px;
+    width: 80%;
+    left: 10%;
+  }
+  .bottom{
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    left: 10%;
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes breathing-color {
+  0%   {color: rgba(128,128,128,0.6);}
+  60% {color: rgba(128,128,128,0.1);}
+  100% {color: rgba(128,128,128,0.1);}
+}
+
+/* Standard syntax */
+@keyframes breathing-color {
+  0%   {color: rgba(128,128,128,0.6);}
+  60% {color: rgba(128,128,128,0.1);}
+  100% {color: rgba(128,128,128,0.1);}
+}
+#section2{
+  .right-arrows{
+    position: relative;
+    top: 50px;
+    $interval: 0.4s;
+    .glyphicon-menu-right{
+      color: rgba(128,128,128,0.1);
+      font-size: 20px;
+    }
+    .glyphicon-menu-right:nth-child(1){
+      animation: breathing-color 2*$interval linear 0s infinite alternate;
+    }
+    .glyphicon-menu-right:nth-child(2){
+      animation: breathing-color 2*$interval linear $interval infinite alternate;
+    }
+    .glyphicon-menu-right:nth-child(3){
+      animation: breathing-color 2*$interval linear 2*$interval infinite alternate;
+    }
+  }
+  .slide.active{
+    img{
+      display: block !important;
+    }
+  }
+  .slide.hide-img {
+    img{
+      display: none;
+    }
+  }
+  .slide{
+    overflow: hidden;
+    img{
+      width: 120%;
+      margin-left: -10%;
+    }
+    &.active + .slide{
+      img{
+        display: block;
+      }
+    }
+  }
+}
+#section3{
+  .map{
+    padding: 10px;
+    background-color: #FFF;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    width: 200px;
+  }
+}
