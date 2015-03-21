@@ -185,6 +185,12 @@ body{
   }
 
   .slide{
+    &.first-slide{
+      img {
+        width: 100%;
+        margin-left: 0%;
+      }
+    }
     overflow: hidden;
     img{
       width: 120%;
